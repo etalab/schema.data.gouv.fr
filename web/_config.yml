@@ -5,7 +5,7 @@ description: >
 twitter_username: etalab
 github_username:  etalab
 github_repository: etalab/schema.data.gouv.fr
-url: https://schema.data.gouv.fr
+url: https://preprod-schema.netlify.app
 lang: fr
 permalink: pretty
 
