@@ -91,6 +91,18 @@ layout: default
       {% endif %}
       {% else %}
       {% if schema_data.external_doc %}
+      {% if schema_data.external_tool %}
+      <div class="form__group" style="margin-top: 3em">
+        <a href="{{ schema_data.external_doc }}" title="Valider des données" class="button icon-button">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 22v-20h16v11.543c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362zm18-7.614v-14.386h-20v24h10.189c3.163 0 9.811-7.223 9.811-9.614zm-5-1.386h-10v-1h10v1zm0-4h-10v1h10v-1zm0-3h-10v1h10v-1z"/></svg>
+          Documentation externe
+        </a>
+        <a href="{{ schema_data.external_tool }}" title="Valider des données" class="button icon-button">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 13h-4v-1h4v1zm2.318-4.288l3.301 3.299-4.369.989 1.068-4.288zm11.682-5.062l-7.268 7.353-3.401-3.402 7.267-7.352 3.402 3.401zm-6 8.916v.977c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h14.056l1.977-2h-18.033v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.843l-2 2.023z"/></svg>
+          Saisir des données
+        </a>
+      </div>
+      {% else %}      
       <div class="form__group" style="margin-top: 3em">
         <a href="{{ schema_data.external_doc }}" title="Valider des données" class="button icon-button">
           <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 22v-20h16v11.543c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362zm18-7.614v-14.386h-20v24h10.189c3.163 0 9.811-7.223 9.811-9.614zm-5-1.386h-10v-1h10v1zm0-4h-10v1h10v-1zm0-3h-10v1h10v-1z"/></svg>
@@ -98,6 +110,18 @@ layout: default
         </a>
       </div>
       {% endif %}
+      {% endif %}
+      {% unless schema_data.external_doc %}
+      {% if schema_data.external_tool %}
+      <div class="form__group" style="margin-top: 3em">
+        <a href="{{ schema_data.external_tool }}" title="Valider des données" class="button icon-button">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 13h-4v-1h4v1zm2.318-4.288l3.301 3.299-4.369.989 1.068-4.288zm11.682-5.062l-7.268 7.353-3.401-3.402 7.267-7.352 3.402 3.401zm-6 8.916v.977c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h14.056l1.977-2h-18.033v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.843l-2 2.023z"/></svg>
+          Saisir des données
+        </a>
+      </div>
+      {% endif %}
+      {% endunless %}
+
       {% endif %}
       {{ content }}
       {% include consolidation.html schema_data=schema_data %}
