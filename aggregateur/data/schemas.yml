@@ -187,9 +187,9 @@ geoffreyaldebert/schema-lieux-covoiturage:
   external_tool: null
   has_changelog: true
   homepage: https://github.com/etalab/schema-lieux-covoiturage
-  latest_version: 0.2.3
+  latest_version: 0.2.4
   schemas:
-  - latest_url: https://preprod-schema.netlify.app/schemas/geoffreyaldebert/schema-lieux-covoiturage/0.2.3/schema.json
+  - latest_url: https://preprod-schema.netlify.app/schemas/geoffreyaldebert/schema-lieux-covoiturage/0.2.4/schema.json
     original_path: schema.json
     path: schema.json
     title: Lieux de covoiturage
@@ -202,6 +202,7 @@ geoffreyaldebert/schema-lieux-covoiturage:
     - 0.2.1
     - 0.2.2
     - 0.2.3
+    - 0.2.4
   title: Lieux de covoiturage
   type: tableschema
   versions:
@@ -213,6 +214,7 @@ geoffreyaldebert/schema-lieux-covoiturage:
   - 0.2.1
   - 0.2.2
   - 0.2.3
+  - 0.2.4
 metis-reseaux/infos-travaux:
   consolidation: null
   description: Schéma permettant de décrire des projets de travaux d'infrastructure.

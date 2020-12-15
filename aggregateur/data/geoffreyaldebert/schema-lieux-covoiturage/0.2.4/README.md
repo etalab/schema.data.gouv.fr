@@ -1,8 +1,8 @@
 ---
-permalink: /geoffreyaldebert/schema-lieux-covoiturage/0.2.3.html
-redirect_from: null
+permalink: /geoffreyaldebert/schema-lieux-covoiturage/latest.html
+redirect_from: /geoffreyaldebert/schema-lieux-covoiturage/0.2.4.html
 title: Lieux de covoiturage
-version: 0.2.3
+version: 0.2.4
 ---
 
 # Schéma des lieux de covoiturage

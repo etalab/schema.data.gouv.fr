@@ -1,8 +1,8 @@
 ---
-permalink: /geoffreyaldebert/schema-lieux-covoiturage/0.2.3/documentation.html
-redirect_from: null
+permalink: /geoffreyaldebert/schema-lieux-covoiturage/latest/documentation.html
+redirect_from: /geoffreyaldebert/schema-lieux-covoiturage/0.2.4/documentation.html
 title: Documentation de Lieux de covoiturage
-version: 0.2.3
+version: 0.2.4
 ---
 
 ## Lieux de covoiturage
@@ -89,6 +89,8 @@ Spécification des lieux permettant le covoiturage
     - Parking relais
     - Délaissé routier
     - Auto-stop
+
+> [En savoir plus sur cette propriété](./type.html)
 
 #### Propriété `date_maj`
 
