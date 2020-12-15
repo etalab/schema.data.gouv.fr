@@ -7,12 +7,12 @@ version: 0.2.3
 
 # test id_lieu
 
-![image](/assets/images/9464ce36-3ef4-11eb-a94b-acde48001122.png){:height="36px" width="36px"}
+![image](/assets/images/79a69858-3efa-11eb-ba34-acde48001122.png){:height="36px" width="36px"}
 
 ## This is a second test
 
 
-![image](/assets/images/9464ce36-3ef4-11eb-a94b-acde48001122.png)
+![image](/assets/images/79a69858-3efa-11eb-ba34-acde48001122.png)
 
 ## Third test
 

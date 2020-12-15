@@ -6,7 +6,8 @@ format-commande-publique:
   url: https://github.com/139bercy/format-commande-publique.git
   type: jsonschema
   email: schema@data.gouv.fr
-  doc: https://www.data.gouv.fr
+  external_doc: https://www.data.gouv.fr
+  external_tool: https://kepler.gl/
 decp-dpa:
   url: https://github.com/etalab/schema-decp-dpa.git
   type: tableschema
@@ -31,11 +32,12 @@ covoiturage:
   url: https://github.com/geoffreyaldebert/schema-lieux-covoiturage.git
   type: tableschema
   email: contact@transport.beta.gouv.fr
-  doc: https://blog.transport.data.gouv.fr/
+  external_doc: https://blog.transport.data.gouv.fr/
 infos-travaux:
   url: https://github.com/metis-reseaux/infos-travaux.git
   type: jsonschema
   email: contact@gotmi.io
+  external_tool: https://www.data.gouv.fr
 stationnement:
   url: https://github.com/etalab/schema-stationnement.git
   type: tableschema
@@ -60,5 +62,6 @@ amenagements-cyclables:
   url: https://github.com/etalab/schema-amenagements-cyclables
   type: jsonschema
   email: contact@transport.beta.gouv.fr
+  external_doc: https://www.data.gouv.fr
 
 

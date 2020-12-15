@@ -111,7 +111,7 @@ class Metadata(object):
 class Repo(object):
     SCHEMA_TYPES = ["tableschema", "xsd", "jsonschema", "generic"]
 
-    def __init__(self, git_url, email, schema_type, external_doc=None):
+    def __init__(self, git_url, email, schema_type, external_doc, external_tool):
         print(git_url)
         print(external_doc)
         super(Repo, self).__init__()
@@ -121,6 +121,7 @@ class Repo(object):
         self.name = parsed_git.name
         self.email = email
         self.external_doc = external_doc
+        self.external_tool = external_tool
         if os.path.isdir(self.clone_dir):
             self.git_repo = GitRepo(self.clone_dir)
         else:
@@ -280,10 +281,17 @@ with open("repertoires.yml", "r") as f:
 metadata = Metadata()
 for repertoire_slug, conf in config.items():
     try:
-        if("doc" in conf):
-            repo = Repo(conf["url"], conf["email"], conf["type"], conf["doc"])
+        if("external_doc" not in conf):
+            external_doc = None
         else:
-            repo = Repo(conf["url"], conf["email"], conf["type"])
+            external_doc = conf['external_doc']
+        if("external_tool" not in conf):
+            external_tool = None
+        else:
+            external_tool = conf['external_tool']
+        
+        repo = Repo(conf["url"], conf["email"], conf["type"], external_doc,external_tool)
+            
         repo.clone_or_pull()
         tags = repo.tags()
     except exceptions.ValidationException as e:
