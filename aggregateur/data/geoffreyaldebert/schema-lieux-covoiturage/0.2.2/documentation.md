@@ -1,8 +1,8 @@
 ---
-permalink: /etalab/schema-lieux-covoiturage/0.1.0/documentation.html
+permalink: /geoffreyaldebert/schema-lieux-covoiturage/0.2.2/documentation.html
 redirect_from: null
 title: Documentation de Lieux de covoiturage
-version: 0.1.0
+version: 0.2.2
 ---
 
 ## Lieux de covoiturage
@@ -10,11 +10,10 @@ version: 0.1.0
 Spécification des lieux permettant le covoiturage
 
 - Auteur : Antoine Augusti pour Etalab
-- Contributeurs : transport.data.gouv.fr, OpenDataFrance, FEDUCO, BlaBlaCar
-- Schéma créé le : 25/06/2019
+- Schéma créé le : 25.06.2019
 - Site web : https://github.com/etalab/schema-lieux-covoiturage
-- Données d'exemple : https://github.com/etalab/schema-lieux-covoiturage/raw/v0.1.0/exemple-valide.csv
-- Version : 0.1.0
+- Données d'exemple : https://github.com/etalab/schema-lieux-covoiturage/raw/v0.2.0/exemple-valide.csv
+- Version : 0.2.0
 - Clé primaire : `id_lieu`
 
 ### Modèle de données
@@ -32,7 +31,7 @@ Spécification des lieux permettant le covoiturage
 | [type](#propriété-type) | chaîne de caractères  | Oui |
 | [date_maj](#propriété-date_maj) | date (format `%Y-%m-%d`) | Oui |
 | [ouvert](#propriété-ouvert) | booléen  | Oui |
-| [source](#propriété-source) | chaîne de caractères  | Oui |
+| [source](#propriété-source) | chaîne de caractères  | Non |
 | [Xlong](#propriété-xlong) | nombre réel  | Oui |
 | [Ylat](#propriété-ylat) | nombre réel  | Oui |
 | [nbre_pl](#propriété-nbre_pl) | nombre entier  | Non |
@@ -45,10 +44,12 @@ Spécification des lieux permettant le covoiturage
 
 #### Propriété `id_lieu`
 
-> *Description : Identifiant du lieu de covoiturage, délivré par le point d'accès national<br/>Ex : 35238-C-001*
+> *Description : Identifiant du lieu de covoiturage, délivré par le point d'accès national selon la règle INSEE-P-XXX où INSEE est le code INSEE de la commune et XXX est le numéro d’ordre d'arrivée dans la base sur 3 chiffres, commençant par 001<br/>Ex : 35238-C-001 pour la première aire référencée dans la commune de code INSEE 35238*
 - Valeur obligatoire
 - Type : chaîne de caractères
 - Motif : `^([013-9]\d|2[AB1-9])\d{3}-C-\d{3}$`
+
+> [En savoir plus sur cette propriété](./id_lieu.html)
 
 #### Propriété `nom_lieu`
 
@@ -87,6 +88,7 @@ Spécification des lieux permettant le covoiturage
     - Supermarché
     - Parking relais
     - Délaissé routier
+    - Auto-stop
 
 #### Propriété `date_maj`
 
@@ -103,7 +105,7 @@ Spécification des lieux permettant le covoiturage
 #### Propriété `source`
 
 > *Description : SIREN de l'entité ayant fourni la donnée<br/>Ex : 225300011*
-- Valeur obligatoire
+- Valeur optionnelle
 - Type : chaîne de caractères
 - Motif : `^\d{9}$`
 
@@ -137,7 +139,7 @@ Spécification des lieux permettant le covoiturage
 
 #### Propriété `duree`
 
-> *Description : Si il existe une restriction sur la durée de stationnement autorisée, la durée maximale de stationnement autorisée exprimée en minutes<br/>Ex : 60*
+> *Description : S'il existe une restriction sur la durée de stationnement autorisée, la durée maximale de stationnement autorisée exprimée en minutes<br/>Ex : 60*
 - Valeur optionnelle
 - Type : nombre entier
 - Valeur supérieur à 0
@@ -156,7 +158,7 @@ Spécification des lieux permettant le covoiturage
 
 #### Propriété `lumiere`
 
-> *Description : Un éclairage nocture est-il présent<br/>Ex : False*
+> *Description : Un éclairage nocturne est-il présent<br/>Ex : False*
 - Valeur optionnelle
 - Type : booléen
 

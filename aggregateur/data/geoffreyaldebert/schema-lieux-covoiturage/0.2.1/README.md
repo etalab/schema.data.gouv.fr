@@ -1,8 +1,8 @@
 ---
-permalink: /etalab/schema-lieux-covoiturage/0.1.2.html
+permalink: /geoffreyaldebert/schema-lieux-covoiturage/0.2.1.html
 redirect_from: null
 title: Lieux de covoiturage
-version: 0.1.2
+version: 0.2.1
 ---
 
 # Schéma des lieux de covoiturage

@@ -1,6 +1,6 @@
 ---
-permalink: /etalab/schema-lieux-covoiturage/latest/documentation.html
-redirect_from: /etalab/schema-lieux-covoiturage/0.2.0/documentation.html
+permalink: /geoffreyaldebert/schema-lieux-covoiturage/0.2.0/documentation.html
+redirect_from: null
 title: Documentation de Lieux de covoiturage
 version: 0.2.0
 ---
@@ -10,7 +10,7 @@ version: 0.2.0
 Spécification des lieux permettant le covoiturage
 
 - Auteur : Antoine Augusti pour Etalab
-- Schéma créé le : 25/06/2019
+- Schéma créé le : 25.06.2019
 - Site web : https://github.com/etalab/schema-lieux-covoiturage
 - Données d'exemple : https://github.com/etalab/schema-lieux-covoiturage/raw/v0.2.0/exemple-valide.csv
 - Version : 0.2.0

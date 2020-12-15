@@ -1,8 +1,8 @@
 ---
-permalink: /etalab/schema-lieux-covoiturage/latest/changelog.html
-redirect_from: /etalab/schema-lieux-covoiturage/0.2.0/changelog.html
+permalink: /geoffreyaldebert/schema-lieux-covoiturage/latest/changelog.html
+redirect_from: /geoffreyaldebert/schema-lieux-covoiturage/0.2.3/changelog.html
 title: CHANGELOG de Lieux de covoiturage
-version: 0.2.0
+version: 0.2.3
 ---
 
 # Changelog

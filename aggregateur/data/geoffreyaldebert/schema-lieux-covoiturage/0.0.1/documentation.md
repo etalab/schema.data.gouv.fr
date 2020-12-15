@@ -1,8 +1,8 @@
 ---
-permalink: /etalab/schema-lieux-covoiturage/0.1.2/documentation.html
+permalink: /geoffreyaldebert/schema-lieux-covoiturage/0.0.1/documentation.html
 redirect_from: null
 title: Documentation de Lieux de covoiturage
-version: 0.1.2
+version: 0.0.1
 ---
 
 ## Lieux de covoiturage
@@ -10,10 +10,11 @@ version: 0.1.2
 Spécification des lieux permettant le covoiturage
 
 - Auteur : Antoine Augusti pour Etalab
-- Schéma créé le : 25/06/2019
+- Contributeurs : transport.data.gouv.fr, OpenDataFrance, FEDUCO, BlaBlaCar
+- Schéma créé le : 25.06.2019
 - Site web : https://github.com/etalab/schema-lieux-covoiturage
-- Données d'exemple : https://github.com/etalab/schema-lieux-covoiturage/raw/v0.1.2/exemple-valide.csv
-- Version : 0.1.2
+- Données d'exemple : https://github.com/etalab/schema-lieux-covoiturage/raw/v0.0.1/exemple-valide.csv
+- Version : 0.0.1
 - Clé primaire : `id_lieu`
 
 ### Modèle de données
@@ -51,13 +52,13 @@ Spécification des lieux permettant le covoiturage
 
 #### Propriété `nom_lieu`
 
-> *Description : Le nom du lieu de covoiturage. Recommandation : inutile de répéter la nature du type de covoiturage<br/>Ex : Les Romains*
+> *Description : Le nom du lieu de covoiturage. Recommandation : inutile de répéter la nature du type de covoiturage.<br/>Ex : Les Romains*
 - Valeur obligatoire
 - Type : chaîne de caractères
 
 #### Propriété `ad_lieu`
 
-> *Description : L'adresse du lieu compréhensible par le grand public pour assurer la coordination entre le passager et le conducteur. Exemple : "3, rue de la gare" ; pour les lieux proches des sorties d'autoroute ou de nationale : "A11 sortie 7 Le Mans Nord" ; pour les zones rurales sans adresse : "croisement de route 1 - route 2" ou "le long de route X après le passage à niveau"<br/>Ex : 3, rue de la Gare*
+> *Description : L'adresse du lieu compréhensible par le grand public pour assurer la coordination entre le passager et le conducteur. Exemple : "3, rue de la gare" ; pour les lieux proches des sorties d'autoroute ou de nationale : "A11 sortie 7 Le Mans Nord" ; pour les zones rurales sans adresse : "croisement de route 1 - route 2" ou "le long de route X après le passage à niveau".<br/>Ex : 3, rue de la Gare*
 - Valeur optionnelle
 - Type : chaîne de caractères
 
@@ -89,7 +90,7 @@ Spécification des lieux permettant le covoiturage
 
 #### Propriété `date_maj`
 
-> *Description : Date de dernière mise à jour des données. Notation ISO 8601, format AAAA-MM-DD<br/>Ex : 2016-10-31*
+> *Description : Date de dernière mise à jour des données. Notation ISO 8601<br/>Ex : 2016-10-31*
 - Valeur obligatoire
 - Type : date (format `%Y-%m-%d`)
 
@@ -101,7 +102,7 @@ Spécification des lieux permettant le covoiturage
 
 #### Propriété `source`
 
-> *Description : SIREN de l'entité ayant fourni la donnée<br/>Ex : 225300011*
+> *Description : Entité ayant fourni la donnée - sous format SIREN<br/>Ex : 225300011*
 - Valeur obligatoire
 - Type : chaîne de caractères
 - Motif : `^\d{9}$`
@@ -136,7 +137,7 @@ Spécification des lieux permettant le covoiturage
 
 #### Propriété `duree`
 
-> *Description : Si il existe une restriction sur la durée de stationnement autorisée, la durée maximale de stationnement autorisée exprimée en minutes<br/>Ex : 60*
+> *Description : Si il existe une restriction sur la durée de stationnement autorisée, la durée maximale de stationnement autorisée exprimée en minutes.<br/>Ex : 60*
 - Valeur optionnelle
 - Type : nombre entier
 - Valeur supérieur à 0
@@ -161,6 +162,6 @@ Spécification des lieux permettant le covoiturage
 
 #### Propriété `comm`
 
-> *Description : Commentaires éventuels sur les commodités mises à disposition du grand public comme : le numéro de téléphone unique qui indique les services disponibles au moment de l'arrivée sur l'aire pour réaliser le dernier kilomètre ; la présence de prises 220V ou USB ; accès à du réseau (télécom, WiFi) ; sanitaires ; intermodalité en transports<br/>Ex : Présence de sanitaires et accès à de l'eau courante*
+> *Description : Commentaires éventuels sur les commodités mises à disposition du grand public comme : le numéro de téléphone unique qui indique les services disponibles au moment de l'arrivée sur l'aire pour réaliser le dernier kilomètre ; la présence de prises 220V ou USB ; accès à du réseau (télécom, WiFi) ; sanitaires ; intermodalité en transports<br/>Ex : Présence de sanitaires et accès à de l'eau courante.*
 - Valeur optionnelle
 - Type : chaîne de caractères
