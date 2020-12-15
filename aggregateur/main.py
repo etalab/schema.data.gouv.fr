@@ -68,6 +68,9 @@ class Metadata(object):
 
     def get(self):
         for slug, data in self.data.items():
+            print(slug)
+            print(data)
+            print("-----")
             sorted_versions = sorted(data["versions"], key=cmp_to_key(SemverCmp))
             self.data[slug]["latest_version"] = sorted_versions[-1]
         return self.data
@@ -108,13 +111,16 @@ class Metadata(object):
 class Repo(object):
     SCHEMA_TYPES = ["tableschema", "xsd", "jsonschema", "generic"]
 
-    def __init__(self, git_url, email, schema_type):
+    def __init__(self, git_url, email, schema_type, external_doc=None):
+        print(git_url)
+        print(external_doc)
         super(Repo, self).__init__()
         parsed_git = giturlparse.parse(git_url)
         self.git_url = git_url
         self.owner = self.find_owner(parsed_git)
         self.name = parsed_git.name
         self.email = email
+        self.external_doc = external_doc
         if os.path.isdir(self.clone_dir):
             self.git_repo = GitRepo(self.clone_dir)
         else:
@@ -274,7 +280,10 @@ with open("repertoires.yml", "r") as f:
 metadata = Metadata()
 for repertoire_slug, conf in config.items():
     try:
-        repo = Repo(conf["url"], conf["email"], conf["type"])
+        if("doc" in conf):
+            repo = Repo(conf["url"], conf["email"], conf["type"], conf["doc"])
+        else:
+            repo = Repo(conf["url"], conf["email"], conf["type"])
         repo.clone_or_pull()
         tags = repo.tags()
     except exceptions.ValidationException as e:

@@ -90,6 +90,7 @@ class BaseValidator(object):
             "type": self.repo.schema_type,
             "consolidation": self.consolidation_data(slug),
             "email": self.repo.email,
+            "external_doc":self.repo.external_doc,
             "version": self.repo.current_version,
             "has_changelog": self.has_changelog,
             "schemas": self.schemas_metadata(),

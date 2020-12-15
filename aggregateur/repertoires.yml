@@ -6,6 +6,7 @@ format-commande-publique:
   url: https://github.com/139bercy/format-commande-publique.git
   type: jsonschema
   email: schema@data.gouv.fr
+  doc: https://www.data.gouv.fr
 decp-dpa:
   url: https://github.com/etalab/schema-decp-dpa.git
   type: tableschema
@@ -27,9 +28,10 @@ subventions:
   type: tableschema
   email: scdl@opendatafrance.email
 covoiturage:
-  url: https://github.com/etalab/schema-lieux-covoiturage.git
+  url: https://github.com/geoffreyaldebert/schema-lieux-covoiturage.git
   type: tableschema
   email: contact@transport.beta.gouv.fr
+  doc: https://blog.transport.data.gouv.fr/
 infos-travaux:
   url: https://github.com/metis-reseaux/infos-travaux.git
   type: jsonschema
