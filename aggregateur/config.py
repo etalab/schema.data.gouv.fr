@@ -1,2 +1,2 @@
-BASE_DOMAIN = "https://schema.data.gouv.fr"
-VALIDATION_DOC_URL = "https://schema.data.gouv.fr/documentation/validation-schemas"
+BASE_DOMAIN = "https://preprod-schema.netlify.app"
+VALIDATION_DOC_URL = "https://preprod-schema.netlify.app/documentation/validation-schemas"
